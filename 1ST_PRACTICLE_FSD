@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Program</h1>
+
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+    
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+</script>
+<canvas id="myCanvas1" width="400" height="100" style="border:1px solid #000000;">
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+ctx.fillText("Hello World", 10, 50);
+    </script>
+    <script>
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 200, 50);
+        </script>
+        <script>
+            var c = document.getElementById("myCanvas1");
+            var ctx = c.getContext("2d");
+            
+            // Create gradient
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+            
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillText("Hello World", 10, 50);
+            </script>
+
+
+        </body>
+        </html>
